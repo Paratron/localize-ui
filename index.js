@@ -129,12 +129,12 @@ function resolveTemplate(translationObject, parameters) {
  * Use this method to define translation data for a given locale. If you do not plan to switch the localization
  * during runtime, you may leave out the locale attribute.
  *
- * @param {object} inPhrases
- * @param {object} [inFormatters]
- * @param {object} [inFormatterSettings]
- * @param {string} [locale=default]
+ * @param {object} phrases
+ * @param {object} [formatters]
+ * @param {object} [formatterSettings]
+ * @param {string} [locale="default"]
  */
-export function defineTranslation(inPhrases, inFormatters, inFormatterSettings, locale = 'default') {
+export function defineLocalization({phrases, formatters: inFormatters, formatterSettings: inFormatterSettings, locale = 'default'}) {
     const data = flattenObject(inPhrases);
 
     Object.keys(data).map(v => prepare(v));
@@ -145,7 +145,7 @@ export function defineTranslation(inPhrases, inFormatters, inFormatterSettings, 
         settings: Object.assign({}, defaultSettings, inFormatterSettings || {})
     };
     if (currentLocale === null) {
-        setLanguage(locale);
+        setLocalization(locale);
     }
 }
 
@@ -156,7 +156,7 @@ export function defineTranslation(inPhrases, inFormatters, inFormatterSettings, 
  * You need to redraw your user interface after you have switched the locale.
  * @param {string} localeKey
  */
-export function setLocale(localeKey) {
+export function setLocalization(localeKey) {
     currentLocale = localeKey;
     phrases = localizations[localeKey].phrases;
     currentSettings = localizations[localeKey].settings;
