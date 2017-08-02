@@ -7,7 +7,9 @@ any usage of formatters and formatter options inside your strings.
 You may just use simple placeholders that get replaced 1:1 by any values
 you pass to the library:
 
+````
 	Hey {{username}}, I am a very simple template!
+````
 	
 To get this placeholder replaced, the developer needs to send an object
 with the property `username` defined to the resolver function. So far,
@@ -17,7 +19,9 @@ this is like most localization or templating systems work.
 Simply append a comma and the name of a pre-defined placeholder function
 and you are good to go:
 
+````
 	I currently have {{credit, moneyFormat}} on my bank account.
+````
 	
 What does this do? It makes localize-ui take the `credit` value and pass
 it to the `moneyFormat()` function before the result is placed into the template
@@ -29,7 +33,9 @@ Sometimes its not enough to just call a formatter with its default settings
 and be done. In some cases you need to modify the behaviour of the formatter
 directly from your template:
 
+````
 	Today is {{time, date, 'l'}}.
+````
 	
 Just add another comma after the formatter name and you may pass any valid JSON-formatted
 settings to the formatter function.
