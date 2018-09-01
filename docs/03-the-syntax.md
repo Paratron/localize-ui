@@ -16,7 +16,7 @@ with the property `username` defined to the resolver function. So far,
 this is like most localization or templating systems work.
 
 ##Using formatters on placeholders
-Simply append a comma and the name of a pre-defined placeholder function
+Simply append a comma and the name of a pre-defined formatter function
 and you are good to go:
 
 ````

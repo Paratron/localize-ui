@@ -1,7 +1,7 @@
 Formatters
 ==========
 
-Formatters are like the soul of localize-ui. They provide all the features
+Formatters are the soul of localize-ui. They provide all the features
 besides simple placeholder replacement and are easily extendable by you.
  
 Formatters are defined together with your localization(s) so you might

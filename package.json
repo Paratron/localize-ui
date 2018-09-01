@@ -1,8 +1,9 @@
 {
   "name": "localize-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Localization tools very similar to formatJS but with a bit different syntax and a functional approach.",
   "main": "index.js",
+  "homepage": "https://paratron.github.io/localize-ui/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
