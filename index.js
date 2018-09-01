@@ -134,7 +134,7 @@ function resolveTemplate(translationObject, parameters) {
  * @param {object} [formatterSettings]
  * @param {string} [locale="default"]
  */
-export function defineLocalization({phrases, formatters: inFormatters, formatterSettings: inFormatterSettings, locale = 'default'}) {
+export function defineLocalization({phrases: inPhrases, formatters: inFormatters, formatterSettings: inFormatterSettings, locale = 'default'}) {
     const data = flattenObject(inPhrases);
 
     Object.keys(data).map(v => prepare(v));
@@ -222,3 +222,5 @@ export function __ns(namespace) {
         return __(namespace + '.' + key, defaultString, parameters);
     }
 }
+
+export default __;
